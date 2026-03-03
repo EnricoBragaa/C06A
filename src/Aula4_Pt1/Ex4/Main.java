@@ -1,35 +1,41 @@
 package Aula4_Pt1.Ex4;
 
-public class Main{
+import java.util.Scanner;
+
+public class Main {
 
     public static void main(String[] args){
+
+        Scanner entrada = new Scanner(System.in);
 
         Zumbi z1 = new Zumbi();
         Zumbi z2 = new Zumbi();
 
-        z1.vida = 100;
-        z2.vida = 200;
+        System.out.println("Entre com a vida do zumbi z1: ");
+        z1.vida = entrada.nextInt();
 
-        System.out.println("Vida do zumbi z1: " + z1.vida);
-        System.out.println("Vida do zumbi z2: " + z2.vida);
+        System.out.println("Entre com a vida do zumbi z2: ");
+        z2.vida = entrada.nextInt();
 
-        if(z1.transfereVida(z2, 50)){
-            System.out.println("Fazendo z1 transferir 50 para z2");
-            System.out.println("Vida do zumbi z1: " + z1.vida);
-            System.out.println("Vida do zumbi z2: " + z2.vida);
+        //z1 = z2;
+
+        //System.out.println("Fazendo z1 = z2");
+
+        System.out.println("Vida do zumbi z1: " + z1.mostraVida());
+        System.out.println("Vida do zumbi z2: " + z2.mostraVida());
+
+        if(z1.transfereVida(z2, 50)==true){
+
+            System.out.println("Transferência de vida bem sucedida!!!");
+
+            System.out.println("Vida do zumbi z1 após transferência: " + z1.vida);
+            System.out.println("Vida do zumbi z2 após transferência: " + z2.vida);
+
         }
-
-
-        if(z1.transfereVida(z2, 150)){
-            System.out.println("Fazendo z1 transferir 150 para z2");
-            System.out.println("Vida do zumbi z1: " + z1.vida);
-            System.out.println("Vida do zumbi z2: " + z2.vida);
-        }else{
-            System.out.println("A vida não foi alterada!!");
+        else {
+            System.out.println("Transferência de vida Mal sucedida :(");
         }
-
 
     }
-
 
 }

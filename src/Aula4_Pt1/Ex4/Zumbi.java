@@ -1,6 +1,29 @@
 package Aula4_Pt1.Ex4;
 
-public class Zumbi{
+public class Zumbi {
+
+    double vida;
+    String nome;
+
+    double mostraVida(){
+        return vida;
+    }
+
+    boolean transfereVida(Zumbi zumbiAlvo, double quantia){
+        if (quantia<zumbiAlvo.vida){
+            vida -= quantia;
+            zumbiAlvo.vida += quantia;
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+}
+
+
+/*public class Zumbi{
 
     double vida;
     String nome;
@@ -22,4 +45,4 @@ public class Zumbi{
 
     }
 
-}
+} */
