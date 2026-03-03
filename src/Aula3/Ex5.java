@@ -1,7 +1,9 @@
+package Aula3;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Ex6 {
+public class Ex5 {
 
     public static void main(String[] args) {
 
@@ -19,14 +21,8 @@ public class Ex6 {
 
         while(numAdivinhado != numGerado){
 
-            if(numAdivinhado<numGerado){
-                System.out.println("Você errou. O numero sorteado é maior que " + numAdivinhado + ".");
-                System.out.println("Tente novamente: ");
-            }
-            else{
-                System.out.println("Você errou. O numero sorteado é menor que " + numAdivinhado + ".");
-                System.out.println("Tente novamente: ");
-            }
+            System.out.println("Você errou, tente novamente.");
+
             numAdivinhado = entrada.nextInt();
         }
 
