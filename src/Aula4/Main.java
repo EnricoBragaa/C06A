@@ -6,6 +6,10 @@ public class Main {
         Zumbi z1 = new Zumbi();
         Zumbi z2 = new Zumbi();
 
+        if(Zumbi){
+
+        }
+
 
 
     }
