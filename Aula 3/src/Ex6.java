@@ -1,0 +1,36 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ex6 {
+
+    public static void main(String[] args) {
+
+        Random rand = new Random();
+
+        int numGerado, numAdivinhado;
+
+        numGerado = rand.nextInt(10)+1;
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Adivinhe o número gerado. Entre com um número: ");
+
+        numAdivinhado = entrada.nextInt();
+
+        while(numAdivinhado != numGerado){
+
+            if(numAdivinhado<numGerado){
+                System.out.println("Você errou. O numero sorteado é maior que " + numAdivinhado + ".");
+                System.out.println("Tente novamente: ");
+            }
+            else{
+                System.out.println("Você errou. O numero sorteado é menor que " + numAdivinhado + ".");
+                System.out.println("Tente novamente: ");
+            }
+            numAdivinhado = entrada.nextInt();
+        }
+
+        System.out.println("Voce acertou!");
+        System.out.println(numGerado);
+    }
+}
